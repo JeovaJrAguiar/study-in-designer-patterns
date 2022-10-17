@@ -50,7 +50,54 @@ export class car {
 }
 
 export class motor{
-    // codigo mitido
+    // codigo omitido
 }
 
-//console.log(carro);
+export class Printer{
+    print(document : Document) : void {
+        console.log(`Printing ${document}`);
+    }
+}
+
+export class Document{
+    private name: string;
+}
+
+// Interface examples
+export interface ControleRemoto {
+    play(): void;
+    pause(): void;
+}
+
+export interface ControleSom extends ControleRemoto{
+    mudarRadio(): void;
+}
+
+export class BlueRay implements ControleRemoto{
+    play(): void{}
+    pause(): void{}
+}
+
+export class Som implements ControleSom{
+    mudarRadio(): void {}
+    pause(): void {}
+    play(): void {}
+}
+
+//
+export abstract class Animal{
+    protected abstract makeNoise(): string;
+
+    makeSound(): void {
+        console.log(this.makeNoise());
+    }
+}
+
+export class Dog extends Animal{
+    protected makeNoise(): string {
+        return "woof or au au";
+    }
+}
+
+const dog = new Dog();
+dog.makeSound(); // woof ou auau
