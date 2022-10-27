@@ -1,3 +1,6 @@
+// Aguiar Jr - Federal University Of Ceara
+// Computer science - Crateus campus - 2022
+
 export class oneClass{
     constructor(
         private firstName:string,
@@ -100,4 +103,4 @@ export class Dog extends Animal{
 }
 
 const dog = new Dog();
-dog.makeSound(); // woof ou auau
+dog.makeSound(); // woof or auau, we use this implements in 
